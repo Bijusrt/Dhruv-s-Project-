@@ -18,49 +18,46 @@ module.exports = async (req,res)=>{
 
         })
 
-        // for(var table_coloumn of table_data){
+        if(table_data.length == 0){
 
-            if(table_data.length == 0){
-
-                await knex('orders').update({
-            
-                    status: '1'
-                
-                }).where({
+            await knex('orders').update({
         
-                    'orderId' : drugs.orderId
-        
-                }).then(result=>{
-        
-                    res.send('done!');
-                
-                })
-
-                return;
-    
-            }else{
-    
-                await knex('local_chemist_list').update({
-    
-                    'status' : 1
-    
-                }).where({
-    
-                    'orderId' : drugs.orderId,
+                status: '1'
             
-                    'email' : table_data[0].email
+            }).where({
+    
+                'orderId' : drugs.orderId
+    
+            }).then(result=>{
+    
+                res.send('done!');
             
-                }).then(data=>{
-    
-                    res.send(req.session.context);
-    
-                })
+            })
 
-                return;
+            return;
+
+        }else{
+
+            await knex('local_chemist_list').update({
+
+                'status' : 1
+
+            }).where({
+
+                'orderId' : drugs.orderId,
+        
+                'email' : table_data[0].email
+        
+            }).then(data=>{
+
+                res.send(req.session.context);
+
+            })
+
+            return;
+
+        }
     
-            }
-    
-        // }
         return;
 
     }

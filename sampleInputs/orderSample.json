@@ -1,0 +1,16 @@
+{
+  "Phone_Number": "+919773901831",
+  "Address": "Unnamed Road, Garh, Himachal Pradesh 176057, India",
+  "Cloud_Path": "/images/tobedeciphered/IMG-20200714-WA0018.jpeg",
+  "Lat": 32.1821675,
+  "Long": 76.3448494,
+  "OrderId": 65,
+  "Phone_Path": "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/IMG-20200714-WA0018.jpeg",
+  "chemist" : {
+	"sochps001@gmail.com":"1",
+	"dhruvg001@gmail.com":"0",
+	"example3@gmail.com":"0",
+	"example4@gmail.com":"0",
+	"example5@gmail.com":"0"
+	}
+}

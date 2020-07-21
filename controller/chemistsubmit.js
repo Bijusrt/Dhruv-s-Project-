@@ -66,7 +66,7 @@ module.exports = async(req,res)=>{
 
     for(var brandedDrug of final_submit_by_chemist){
 
-        if(brandedDrug.branded_price == undefined || brandedDrug.branded_price == ''){console.log(1);
+        if(brandedDrug.branded_price == undefined || brandedDrug.branded_price == ''){
 
             delete brandedDrug.branded_price;
 
@@ -124,7 +124,7 @@ module.exports = async(req,res)=>{
         })
 
     }else{ 
-        console.log(12);
+
         req.session.context = redirect_to_next_chemist_list ;
 
         res.redirect('/redirect/nextchemist');
